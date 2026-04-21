@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>alea</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>alea</h1>
+      <p class="tagline">the vibe-coded HTML/JS edition of Randomhub</p>
+    </header>
+
+    <nav class="tabs" aria-label="alea randomization tabs">
+      <button class="tab-btn" data-tab="dice" aria-selected="true">dice</button>
+      <button class="tab-btn" data-tab="cards" aria-selected="false">cards</button>
+    </nav>
+
+    <section id="dice" class="panel active" aria-live="polite">
+      <p class="small-note">Roll a 6-sided die.</p>
+      <div class="controls">
+        <label>number of sides: <strong>6</strong></label>
+        <button class="btn" id="roll-btn">roll</button>
+      </div>
+      <pre class="output" id="dice-output"></pre>
+    </section>
+
+    <section id="cards" class="panel" aria-live="polite">
+      <p class="small-note">Draw cards from a full 52-card deck.</p>
+      <div class="controls">
+        <label for="draw-count">cards to draw:</label>
+        <input id="draw-count" type="number" min="1" max="52" value="1" />
+        <button class="btn" id="draw-btn">draw</button>
+      </div>
+      <pre class="output" id="cards-output"></pre>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
