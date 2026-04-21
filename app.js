@@ -1,3 +1,20 @@
+const darkThemeBtn = document.getElementById("theme-dark-btn");
+const lightThemeBtn = document.getElementById("theme-light-btn");
+const THEME_STORAGE_KEY = "alea-theme";
+
+function setTheme(theme) {
+  const isDark = theme === "dark";
+  document.body.classList.toggle("theme-dark", isDark);
+  darkThemeBtn.setAttribute("aria-pressed", String(isDark));
+  lightThemeBtn.setAttribute("aria-pressed", String(!isDark));
+  localStorage.setItem(THEME_STORAGE_KEY, isDark ? "dark" : "light");
+}
+
+darkThemeBtn.addEventListener("click", () => setTheme("dark"));
+lightThemeBtn.addEventListener("click", () => setTheme("light"));
+const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+setTheme(savedTheme === "dark" ? "dark" : "light");
+
 const tabButtons = document.querySelectorAll(".tab-btn");
 const panels = document.querySelectorAll(".panel");
 

@@ -9,8 +9,16 @@
 <body>
   <main class="app">
     <header class="header">
-      <h1>alea</h1>
-      <p class="tagline">the vibe-coded HTML/JS edition of Randomhub</p>
+      <div class="header-top">
+        <div>
+          <h1>alea</h1>
+          <p class="tagline">the vibe-coded HTML/JS edition of Randomhub</p>
+        </div>
+        <div class="theme-switcher" aria-label="Theme selector">
+          <button class="theme-btn" id="theme-dark-btn" type="button" aria-pressed="false">🌙</button>
+          <button class="theme-btn" id="theme-light-btn" type="button" aria-pressed="true">☀️</button>
+        </div>
+      </div>
     </header>
 
     <nav class="tabs" aria-label="alea randomization tabs">
