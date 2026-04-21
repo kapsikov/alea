@@ -179,3 +179,28 @@ pre.output {
   color: var(--danger);
   font-weight: 600;
 }
+
+.country-output {
+  margin: 0;
+  padding: 1rem;
+  border-radius: 10px;
+  background: var(--panel-2);
+  border: 1px solid color-mix(in srgb, var(--muted) 35%, transparent);
+  min-height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.4rem;
+}
+
+.country-flag {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.country-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+}

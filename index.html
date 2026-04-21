@@ -24,6 +24,7 @@
     <nav class="tabs" aria-label="alea randomization tabs">
       <button class="tab-btn" data-tab="dice" aria-selected="true">dice</button>
       <button class="tab-btn" data-tab="cards" aria-selected="false">cards</button>
+      <button class="tab-btn" data-tab="countries" aria-selected="false">countries</button>
     </nav>
 
     <section id="dice" class="panel active" aria-live="polite">
@@ -43,6 +44,14 @@
         <button class="btn" id="draw-btn">draw</button>
       </div>
       <pre class="output" id="cards-output"></pre>
+    </section>
+
+    <section id="countries" class="panel" aria-live="polite">
+      <p class="small-note">Pick a random country.</p>
+      <div class="controls">
+        <button class="btn" id="country-btn">random country</button>
+      </div>
+      <div class="country-output" id="countries-output"></div>
     </section>
   </main>
 
