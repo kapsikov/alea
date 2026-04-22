@@ -25,6 +25,7 @@
       <button class="tab-btn" data-tab="dice" aria-selected="true">dice</button>
       <button class="tab-btn" data-tab="cards" aria-selected="false">cards</button>
       <button class="tab-btn" data-tab="countries" aria-selected="false">countries</button>
+      <button class="tab-btn" data-tab="magic-8-ball" aria-selected="false">magic 8-ball</button>
     </nav>
 
     <section id="dice" class="panel active" aria-live="polite">
@@ -52,6 +53,16 @@
         <button class="btn" id="country-btn">random country</button>
       </div>
       <div class="country-output" id="countries-output"></div>
+    </section>
+
+    <section id="magic-8-ball" class="panel" aria-live="polite">
+      <p class="small-note">Ask a question and let the magic 8-ball decide.</p>
+      <div class="controls">
+        <label for="magic-8-ball-question">your question:</label>
+        <input id="magic-8-ball-question" type="text" placeholder="Will I have a lucky day?" />
+        <button class="btn" id="magic-8-ball-btn">ask</button>
+      </div>
+      <div class="magic-8-ball-output" id="magic-8-ball-output"></div>
     </section>
   </main>
 
