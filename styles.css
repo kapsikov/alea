@@ -146,6 +146,17 @@ input[type="number"] {
   font-size: 0.95rem;
 }
 
+input[type="text"] {
+  min-width: 18rem;
+  width: min(100%, 24rem);
+  background: var(--panel-2);
+  color: var(--text);
+  border: 1px solid color-mix(in srgb, var(--muted) 40%, transparent);
+  border-radius: 8px;
+  padding: 0.45rem 0.55rem;
+  font-size: 0.95rem;
+}
+
 .btn {
   border: 0;
   border-radius: 8px;
@@ -202,5 +213,25 @@ pre.output {
 
 .country-name {
   font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.magic-8-ball-output {
+  margin: 0;
+  padding: 1rem;
+  border-radius: 10px;
+  background: var(--panel-2);
+  border: 1px solid color-mix(in srgb, var(--muted) 35%, transparent);
+  min-height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.4rem;
+}
+
+.magic-8-ball-answer {
+  font-size: 1.15rem;
   font-weight: 700;
 }

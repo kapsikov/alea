@@ -356,3 +356,55 @@ function pickRandomCountry() {
 }
 
 countryBtn.addEventListener("click", pickRandomCountry);
+
+const magic8BallBtn = document.getElementById("magic-8-ball-btn");
+const magic8BallQuestionInput = document.getElementById("magic-8-ball-question");
+const magic8BallOutput = document.getElementById("magic-8-ball-output");
+
+const magic8BallAnswers = [
+  "It is certain",
+  "It is decidedly so",
+  "Without a doubt",
+  "Yes definitely",
+  "You may rely on it",
+  "As I see it, yes",
+  "Most likely",
+  "Outlook good",
+  "Yes",
+  "Signs point to yes",
+  "Reply hazy, try again",
+  "Ask again later",
+  "Better not tell you now",
+  "Cannot predict now",
+  "Concentrate and ask again",
+  "Don’t count on it",
+  "My reply is no",
+  "My sources say no",
+  "Outlook not so good",
+  "Very doubtful"
+];
+
+function askMagic8Ball() {
+  const question = magic8BallQuestionInput.value.trim();
+  if (!question.endsWith("?")) {
+    magic8BallOutput.innerHTML = '<span class="error">Please ask a full question that ends with a question mark.</span>';
+    return;
+  }
+
+  magic8BallOutput.innerHTML = "<div>🎱 Thinking...</div>";
+  magic8BallBtn.disabled = true;
+
+  setTimeout(() => {
+    const randomIndex = Math.floor(Math.random() * magic8BallAnswers.length);
+    const answer = magic8BallAnswers[randomIndex];
+    magic8BallOutput.innerHTML = `<div><strong>Question:</strong> ${question}</div><div class="magic-8-ball-answer">${answer}</div>`;
+    magic8BallBtn.disabled = false;
+  }, 1000);
+}
+
+magic8BallBtn.addEventListener("click", askMagic8Ball);
+magic8BallQuestionInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    askMagic8Ball();
+  }
+});
